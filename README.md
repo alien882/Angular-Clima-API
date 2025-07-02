@@ -2,7 +2,7 @@
 
 Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
 
-Aplicación web básica sobre para la consulta del clima en un determinado lugar el cual usa lo nuevo de angular y otras tecnologías como:
+Aplicación web básica sobre la consulta del clima en un determinado lugar el cual usa lo nuevo de angular y otras tecnologías como:
 
 - **Signals**
 - **Inyección de Dependencias**
