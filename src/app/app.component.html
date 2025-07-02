@@ -1,0 +1,9 @@
+<h1 class="title">Buscador de clima</h1>
+<div class="container">
+    <app-form />
+    @if (loading) {
+        <app-spinner />
+    } @else {
+        <app-weather-detail />
+    }
+</div>

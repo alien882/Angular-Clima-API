@@ -1,0 +1,35 @@
+<form 
+    class="form"
+    [formGroup]="reactiveForm"
+    (ngSubmit)="onSubmit()"
+>
+    @if (error()) {
+        <app-alert
+            message="Todos los campos son obligatorios"
+        />
+    }
+    <div class="field">
+        <label for="city">Ciudad:</label>
+        <input 
+            id="city"
+            type="text"  
+            placeholder="ciudad"
+            formControlName="city" 
+        />
+    </div>
+    <div class="field">
+        <label for="country">País:</label>
+        <select 
+            id="country"
+            formControlName="country"
+        >
+            <option value="">-- Seleccione un País --</option>
+            @for (country of countries; track country.code) {
+                <option [value]="country.code">
+                    {{country.name}}
+                </option>
+            }
+        </select>
+    </div>
+    <input type="submit" value="Consultar Clima" class="submit" />
+</form>

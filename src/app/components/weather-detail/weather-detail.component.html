@@ -1,0 +1,18 @@
+@if (hasData()) {
+
+    @if (isError()) {
+        <app-alert [message]="error" />
+    } @else {
+
+        <div class="container">
+            <h2>Clima de: {{weather.name}}</h2>
+            <p class="current">{{weather.main.temp | formatTemperature}}&deg;C</p>
+            <div class="temperatures">
+                <p>Min: <span>{{weather.main.temp_min | formatTemperature}}&deg;C</span></p>
+                <p>Max: <span>{{weather.main.temp_max | formatTemperature}}&deg;C</span></p>
+            </div>
+        </div>
+
+    }
+
+}
